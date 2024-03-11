@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Métodos;
+package MétodosArreglos;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author ANDRES GARCES
  */
-public class Métodos {
+public class MétodosArreglos {
     
     //Declaro el Arreglo (1)
     int NombreArreglo[] = new int[4];
@@ -69,30 +69,31 @@ public class Métodos {
     void actualizarDato() {
         System.out.print("Dígite el Documento a Actualizar: ");
         int numeroDocumento = scan.nextInt();
-        scan.nextLine(); // Limpiar el buffer del teclado
+        scan.nextLine(); //Limpiar el buffer del teclado
         
         boolean encontrado = false;
         for (int i = 0; i < NombreArreglo.length; i++) {
             if (NombreArreglo[i] == numeroDocumento) {
                 System.out.print("Dígite el nuevo Documento a Registrar: ");
                 int nuevoNumeroDocumento = scan.nextInt();
-                scan.nextLine(); // Limpiar el buffer del teclado
+                scan.nextLine(); //Limpiar el buffer del teclado
                 NombreArreglo[i] = nuevoNumeroDocumento;
                 encontrado = true;
                 break;
             }
         }
+        
         if (!encontrado) {
             System.out.println("El Documento no está registrado");
         } else {
-            System.out.println("Documento actualizado correctamente");
+            System.out.println("Documento fue actualizado correctamente");
         }
     }
     
     //Método de Rango de Datos
     void rangoDatos() {
         int contador = 0;
-        System.out.println("Los Saldos que están dentro del rango de 1M y 2M son:");
+        System.out.println("Saldos que están dentro del rango de 1M y 2M");
         for (int i = 0; i < NombreArreglo.length; i++) {
             if (NombreArreglo[i] >= 1000000 && NombreArreglo[i] <= 2000000) {
                 contador++;

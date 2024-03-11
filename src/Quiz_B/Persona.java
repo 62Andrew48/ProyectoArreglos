@@ -36,7 +36,7 @@ public class Persona {
     
     void rangoSaldos() {
         int contador = 0;
-        System.out.println("Los Saldos que están dentro del rango de 1M y 2M son:");
+        System.out.println("Saldos que están dentro del rango de 1M y 2M");
         for (int i = 0; i < saldo.length; i++) {
             if (saldo[i] >= 1000000 && saldo[i] <= 2000000) {
                 contador++;
